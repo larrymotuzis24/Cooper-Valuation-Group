@@ -24,28 +24,28 @@ const About = () => {
                     <p> Michael L. Cooper </p>
                     <p> Founder and President </p>
                     <p> Mobile: 773-406-5140 </p>
-                    <a href='mailto:mcooper@coopervaluationgroup.com'> mcooper@coopervaluationgroup.com </a>
+                    <a className="mb-2 mx-2" href='mailto:mcooper@coopervaluationgroup.com'> mcooper@coopervaluationgroup.com </a>
                 </div>
                 <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG"> 
                     <img src={DavidGulley} alt="David Gulley" className="w-32 h-44 my-2"/>  
                     <p> David P. Gulley </p>
                     <p> Certified General Appraiser </p>
                     <p> Mobile: 773-495-6388 </p>
-                    <a href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>  
+                    <a className="mb-2 mx-2" href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>  
                 </div>
                 <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
                     <img src={MichaelMadziarek} alt="Michael Madziarek" className="w-32 h-44 my-2"/>
                     <p> Michael E. Madziarek </p>
                     <p> Certified General Appraiser </p>
                     <p> Mobile: 224-227-7045 </p>
-                    <a href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>     
+                    <a className="mb-2 mx-2" href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>     
                 </div>
                 <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
                 <img src={PatRiley} alt="Pat Riley" className="w-32 h-44 my-2"/>
                     <p> Patrick Riley </p>
                     <p> Tech Supervisor </p>
                     <p> Mobile: 630-267-4861 </p>
-                    <a href='mailto:PRiley@coopervaluationgroup.com'> PRiley@coopervaluationgroup.com </a>     
+                    <a className="mb-2 mx-2" href='mailto:PRiley@coopervaluationgroup.com'> PRiley@coopervaluationgroup.com </a>     
                 </div>
             </div>
         </div>
