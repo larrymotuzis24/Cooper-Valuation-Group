@@ -7,6 +7,7 @@ import Press from './Components/Press';
 import ContactPage from './Components/ContactPage';
 import { Route, Routes } from 'react-router-dom';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />  
         </Route>
       </Routes>
+      <Footer /> 
     </div>
   );
 }

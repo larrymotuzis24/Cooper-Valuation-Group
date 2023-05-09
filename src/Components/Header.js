@@ -8,7 +8,7 @@ const Header = () => {
         <div className="flex flex-col">
         <div className="flex items-center justify-around">
             <div className="flex items-center">
-                <img className="absolute top-5 left-5 z-10 w-60 h-40" src={CVGlogo} alt="CVG logo"/>
+                <img className="absolute top-5 left-20 z-10 w-60 h-40" src={CVGlogo} alt="CVG logo"/>
             </div>
             <div className="mt-20">
             <Nav />

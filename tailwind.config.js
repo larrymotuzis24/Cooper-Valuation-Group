@@ -4,6 +4,8 @@ module.exports = {
   theme: {
     colors: {
       darkGreenBG: "#1F9D55",
+      footerBG: "#000000",
+      footerTxt:"#fff",
       
     },
     extend: {},

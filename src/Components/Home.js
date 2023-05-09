@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 const Home = () => {
     return (
         <div className="flex flex-col w-5/6 mx-auto">
@@ -28,8 +29,6 @@ const Home = () => {
 
                 <p> Our valued clients include HUD Lenders, banks, financial institutions, private firms, developers, owners/operators, and buyers/sellers. Our clients are active in Illinois, Iowa, Wisconsin, Indiana, Ohio, Missouri, and Michigan.</p>
             </div>
-            
-            
         </div>
     )
 };
