@@ -9,7 +9,7 @@ const About = () => {
     return (
         <div className="flex flex-col w-5/6 mx-auto pb-4">
             <div className="flex flex-col">
-             <div className="w-40 border border-black place-self-center"></div>
+             <div className="w-60 border border-black place-self-center"></div>
              <h2 className="text-3xl font-bold text-center whitespace-nowrap"> Our People </h2>
              <div className="w-40 border border-black place-self-center mb-1"></div>
             </div>
