@@ -6,6 +6,25 @@ import PatRiley from '../bioImages/PatRiley.jpg';
 
 
 const About = () => {
+    const teamList = [
+        {firstName:'Michael L.', lastName:'Cooper', role:'Founder and President', mobile:'773-406-5140', emailHref:'mcooper@coopervaluationgroup.com', bioPicSrc:MichaelCooper},
+        {firstName:'David P.', lastName:'Gulley', role:'Certified General Appraiser', mobile:'773-495-6388', emailHref:'dgulley@coopervaluationgroup.com', bioPicSrc:DavidGulley},
+        {firstName:'Michael E.', lastName:'Madziarek', role:'Certified General Appraiser', mobile:'773-495-6388', emailHref:'dgulley@coopervaluationgroup.com', bioPicSrc:MichaelMadziarek},
+        {firstName:'Patrick', lastName:'Riley', role:'Tech Supervisor', mobile:'630-267-4861', email:'mailto:PRiley@coopervaluationgroup.com', bioPicSrc:PatRiley},
+    ];
+
+    const teamListDisplay = teamList.map((person, index) => {
+        return (
+            <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
+                    <img src={person.bioPicSrc} alt="Michael Cooper" className="w-32 h-40 my-2"/>
+                    <p> {person.firstName} {person.lastName} </p>
+                    <p> {person.role} </p>
+                    <p> Mobile:{person.mobile} </p>
+                    <a className="mb-2 mx-2" href={`mailto:${person.email}`}> {person.email} </a>
+                </div>
+        )
+    });
+
     return (
         <div className="flex flex-col w-5/6 mx-auto pb-4">
             <div className="flex flex-col">
@@ -19,34 +38,8 @@ const About = () => {
                     He is familiar with <span className="font-bold"> HUD’s Lean Program </span>for insuring mortgages for Section 232’s (nursing and assisted living facilities). HUD developed the LEAN process in 2008 specifically for Section 232 applications.</p>
             </div>
             <div className="flex flex-row justify-around mt-2 ">
-                <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
-                    <img src={MichaelCooper} alt="Michael Cooper" className="w-32 h-40 my-2"/>
-                    <p> Michael L. Cooper </p>
-                    <p> Founder and President </p>
-                    <p> Mobile: 773-406-5140 </p>
-                    <a className="mb-2 mx-2" href='mailto:mcooper@coopervaluationgroup.com'> mcooper@coopervaluationgroup.com </a>
-                </div>
-                <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG"> 
-                    <img src={DavidGulley} alt="David Gulley" className="w-32 h-40 my-2"/>  
-                    <p> David P. Gulley </p>
-                    <p> Certified General Appraiser </p>
-                    <p> Mobile: 773-495-6388 </p>
-                    <a className="mb-2 mx-2" href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>  
-                </div>
-                <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
-                    <img src={MichaelMadziarek} alt="Michael Madziarek" className="w-32 h-40 my-2"/>
-                    <p> Michael E. Madziarek </p>
-                    <p> Certified General Appraiser </p>
-                    <p> Mobile: 224-227-7045 </p>
-                    <a className="mb-2 mx-2" href='mailto:dgulley@coopervaluationgroup.com'> dgulley@coopervaluationgroup.com </a>     
-                </div>
-                <div className="border border-black flex flex-col items-center mx-2 bg-darkGreenBG">
-                <img src={PatRiley} alt="Pat Riley" className="w-32 h-40 my-2"/>
-                    <p> Patrick Riley </p>
-                    <p> Tech Supervisor </p>
-                    <p> Mobile: 630-267-4861 </p>
-                    <a className="mb-2 mx-2" href='mailto:PRiley@coopervaluationgroup.com'> PRiley@coopervaluationgroup.com </a>     
-                </div>
+               {teamListDisplay}
+                  
             </div>
         </div>
     )
