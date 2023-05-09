@@ -21,7 +21,7 @@ const clientDisplay = clientList.map((client, index) => {
         <div className='flex flex-col mx-auto w-5/6'>
              <div className="flex flex-col">
              <div className="w-80 border border-black place-self-center"></div>
-             <h2  className="text-3xl font-bold text-center whitespace-nowrap"> Products & Services </h2>
+             <h2  className="text-3xl font-bold text-center whitespace-nowrap"> Clients & Testimonials </h2>
              <div className="w-60 border border-black place-self-center mb-1"></div>
              <div className="self-center mt-4">
                 <p className="text-xl" > {clientPageIntro} </p>
