@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import MichaelCooper from '../bioImages/MichaelCooper.jpg';
 import MichaelMadziarek from '../bioImages/MichaelMadziarek.jpg';
 import DavidGulley from '../bioImages/DavidGulley.jpg';
 import PatRiley from '../bioImages/PatRiley.jpg';
 
-
 const About = () => {
-    const teamList = [
-        {firstName:'Michael L.', lastName:'Cooper', role:'Founder and President', mobile:'773-406-5140',email:'coopervaluationgroup.com', bioPicSrc:MichaelCooper},
-        {firstName:'David P.', lastName:'Gulley', role:'Certified General Appraiser', mobile:'773-495-6388', email:'dgulley@coopervaluationgroup.com', bioPicSrc:DavidGulley},
-        {firstName:'Michael E.', lastName:'Madziarek', role:'Certified General Appraiser', mobile:'773-495-6388', email:'dgulley@coopervaluationgroup.com', bioPicSrc:MichaelMadziarek},
-        {firstName:'Patrick', lastName:'Riley', role:'Tech Supervisor', mobile:'630-267-4861', email:'PRiley@coopervaluationgroup.com', bioPicSrc:PatRiley},
-    ];
+  const [popupVisible, setPopupVisible] = useState(false);
+  const [selectedPerson, setSelectedPerson] = useState(null);
+  const [popupContent, setPopupContent] = useState("");
 
-    
-const teamListDisplay = teamList.map((person, index) => {
+  const teamList = [
+    {firstName:'Michael L.', lastName:'Cooper', role:'Founder and President', mobile:'773-406-5140',email:'coopervaluationgroup.com', bioPicSrc:MichaelCooper},
+    {firstName:'David P.', lastName:'Gulley', role:'Certified General Appraiser', mobile:'773-495-6388', email:'dgulley@coopervaluationgroup.com', bioPicSrc:DavidGulley},
+    {firstName:'Michael E.', lastName:'Madziarek', role:'Certified General Appraiser', mobile:'773-495-6388', email:'dgulley@coopervaluationgroup.com', bioPicSrc:MichaelMadziarek},
+    {firstName:'Patrick', lastName:'Riley', role:'Tech Supervisor', mobile:'630-267-4861', email:'PRiley@coopervaluationgroup.com', bioPicSrc:PatRiley},
+];
+
+  const handleImageClick = (person, content) => {
+    setSelectedPerson(person);
+    setPopupContent(content);
+    setPopupVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setPopupVisible(false);
+  };
+
+  const teamListDisplay = teamList.map((person, index) => {
+    // Customize the content for each person
+    const customContent = `This is the custom content for ${person.firstName} ${person.lastName}.`;
+
     return (
-      <div className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
-        <img src={person.bioPicSrc} alt="Michael Cooper" className="w-32 h-40 my-2 rounded-lg"/>
+      <div key={index} className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
+        <img src={person.bioPicSrc} alt={person.firstName + " " + person.lastName} className="w-32 h-40 my-2 rounded-lg cursor-pointer" onClick={() => handleImageClick(person, customContent)}/>
         <p className="text-green-600 font-semibold text-lg"> {person.firstName} {person.lastName} </p>
-        <p className="text-green-500 font-medium"> {person.role} </p>
-        <p className="text-green-700"> Mobile: {person.mobile} </p>
-        <a className="text-green-600 hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
+           <p className="text-green-500 font-medium"> {person.role} </p>
+           <p className="text-green-700"> Mobile: {person.mobile} </p>
+           <a className="text-green-600 hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
       </div>
     )
   });
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-2 pb-12 sm:px-8 bg-gradient-to-br from-green-300 via-green-400 to-green-500 rounded-lg shadow-md text-white">
+    <div className="flex flex-col w-full mx-auto pt-2 pb-12 sm:px-8">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
         <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2"> Our People </h2>
@@ -42,10 +57,21 @@ const teamListDisplay = teamList.map((person, index) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {teamListDisplay}
       </div>
+      {popupVisible && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          {/* Make sure the overlay is before the popup content div */}
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-gray-800 relative">
+            <button className="exit-popup text-red-500 hover:text-red-700" onClick={handleClosePopup}>&times;</button>
+            
+            <div className="popup-content">
+              {popupContent}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-  )
-      
+  );
 };
 
 export default About;
-
