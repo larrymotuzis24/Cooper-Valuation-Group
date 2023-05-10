@@ -18,7 +18,7 @@ const Header = () => {
             <img className="w-48 h-32" src={CVGlogo} alt="CVG logo" />
           </div>
           <button
-            className="lg:hidden text-white focus:outline-none hover:text-green-200 transition-colors"
+            className="lg:hidden text-white focus:outline-none hover:text-third transition-colors"
             onClick={toggleMenu}
           >
             <svg

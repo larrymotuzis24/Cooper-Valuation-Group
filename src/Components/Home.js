@@ -8,7 +8,7 @@ import { MdOutlineAnalytics } from "react-icons/md";
 const Home = () => {
   return (
     <div className="flex flex-col w-full lg:w-5/6 mx-auto py-8 px-4 lg:px-0">
-      <div className="bg-gradient-to-r from-textbox via-first to-second p-8 rounded-lg shadow-md text-white mb-12">
+      <div className="bg-gradient-to-r from-textbox via-first to-second p-8 rounded-lg shadow-md text-white mb-6">
         <h2 className="font-Garamond text-7xl font-bold text-center mb-8">
           Cooper Valuation Group
         </h2>
