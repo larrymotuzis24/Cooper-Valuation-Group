@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <div className="flex flex-col">
-      <header className="bg-gradient-to-r from-green-500 via-green-600 to-green-700 shadow-md py-4">
+      <header className="bg-gradient-to-r from-textbox via-first to-second shadow-md py-4">
         <div className="container mx-auto flex items-center justify-between px-4 lg:px-0">
           <div className="flex items-center">
             <img className="w-48 h-32" src={CVGlogo} alt="CVG logo" />
@@ -46,7 +46,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="mt-8 place-self-center">
+      <div className="mt-2 place-self-center">
         <Outlet />
       </div>
     </div>

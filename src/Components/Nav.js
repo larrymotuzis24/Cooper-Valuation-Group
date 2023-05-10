@@ -13,13 +13,13 @@ const Nav = () => {
   ];
 
   return (
-    <nav className="bg-green-700 rounded-lg p-2 lg:ml-4">
+    <nav className="bg-white rounded-lg p-2 lg:ml-4">
       <ul className="flex flex-col lg:flex-row gap-2 lg:gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
             <Link
               to={item.path}
-              className="text-white text-lg font-medium px-2 py-1 rounded-lg hover:bg-green-600 transition-colors"
+              className="text-third text-lg font-medium px-2 py-1 rounded-lg hover:bg-nongreen transition-colors"
             >
               {item.name}
             </Link>

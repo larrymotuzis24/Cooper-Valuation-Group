@@ -33,10 +33,10 @@ const About = () => {
     return (
       <div key={index} className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
         <img src={person.bioPicSrc} alt={person.firstName + " " + person.lastName} className="w-32 h-40 my-2 rounded-lg cursor-pointer" onClick={() => handleImageClick(person, customContent)}/>
-        <p className="text-green-600 font-semibold text-lg"> {person.firstName} {person.lastName} </p>
-           <p className="text-green-500 font-medium"> {person.role} </p>
-           <p className="text-green-700"> Mobile: {person.mobile} </p>
-           <a className="text-green-600 hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
+        <p className="text-third font-semibold text-lg"> {person.firstName} {person.lastName} </p>
+           <p className="text-second font-medium"> {person.role} </p>
+           <p className="text-primary"> Mobile: {person.mobile} </p>
+           <a className="text-primary hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
       </div>
     )
   });
