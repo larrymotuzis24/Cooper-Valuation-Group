@@ -2,47 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = () => {
-  const linkStyles =
-    "block py-2 px-4 lg:px-0 text-white hover:text-blue-200 transition-colors font-semibold";
+  const navItems = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Products & Services", path: "/services" },
+    { name: "Clients & Testimonials", path: "/clients" },
+    { name: "Newsletters", path: "/newsletters" },
+    { name: "Press", path: "/press" },
+    { name: "Contact Us", path: "/contact" },
+  ];
 
   return (
-    <nav>
-      <ul className="lg:flex lg:space-x-8">
-        <li>
-          <Link to="/" className={linkStyles}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" className={linkStyles}>
-            About Us
-          </Link>
-        </li>
-        <li>
-          <Link to="/services" className={linkStyles}>
-            Products & Services
-          </Link>
-        </li>
-        <li>
-          <Link to="/clients" className={linkStyles}>
-            Clients & Testimonials
-          </Link>
-        </li>
-        <li>
-          <Link to="/newsletters" className={linkStyles}>
-            Newsletters
-          </Link>
-        </li>
-        <li>
-          <Link to="/press" className={linkStyles}>
-            Press
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className={linkStyles}>
-            Contact Us
-          </Link>
-        </li>
+    <nav className="bg-green-700 rounded-lg p-2 lg:ml-4">
+      <ul className="flex flex-col lg:flex-row gap-2 lg:gap-4">
+        {navItems.map((item, index) => (
+          <li key={index}>
+            <Link
+              to={item.path}
+              className="text-white text-lg font-medium px-2 py-1 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              {item.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
