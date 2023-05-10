@@ -8,26 +8,30 @@ const Newsletters = () => {
         {title:'HUD Lean Seminar – Philadelphia - March 2013', link:'https://www.coopervaluationgroup.com/HUD%20Lean%20Update%20-%20Cooper%20Valuation%20Group%20-%20Spring%202013%20Newsletter.pdf'},
         {title:'HUD Lean Seminar – Chicago September 2011', link:'https://www.coopervaluationgroup.com/HUD%20Lean%20Update%20-%20Cooper%20Valuation%20Group%20-%20Fall%202011%20Newsletter.pdf'},
         {title:'Summer 2011 – Midwest Market Update', link:'https://www.coopervaluationgroup.com/Midwest%20Economy%20&%20Skilled%20Nursing%20Facility%20Trends%20-%20Cooper%20Valuation%20Group%20-%20Summer%202011%20Newsletter.pdf'}
-];
-    const newslettersDisplay = newslettersList.map((newletter, index) => {
-        return (
-            <a key={index} href={newletter.link} className="inline-block px-4 py-2 rounded-md text-white hover:font-bold underline"> {newletter.title} </a> 
-        )
-    });
+    ];
 
     return (
-        <div>
-             <div className="flex flex-col">
-             <div className="w-80 border border-black place-self-center"></div>
-             <h2  className="text-3xl font-bold text-center whitespace-nowrap"> CVG Newsletters </h2>
-             <div className="w-60 border border-black place-self-center mb-1"></div>
-             </div>
-             <div className="relative flex flex-col mt-6">
-                    {newslettersDisplay}
-                    <div class="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none bg-gray-500"></div>
-             </div>
+        <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+            <div className="flex flex-col mb-8">
+                <div className="w-80 border-b border-white mx-auto"></div>
+                <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> CVG Newsletters </h2>
+                <div className="w-60 border-b border-white mx-auto mb-4"></div>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+                    {newslettersList.map((newsletter, index) => (
+                        <div key={index} className="flex flex-col items-center p-4 bg-blue-100 rounded-lg shadow-md space-y-2">
+                            <a href={newsletter.link} className="text-center text-blue-600 hover:underline">{newsletter.title}</a>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 };
 
 export default Newsletters;
+
+
+
+
