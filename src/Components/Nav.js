@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   const linkStyles =
-    "block py-2 px-4 lg:px-0 text-blue-600 hover:text-blue-800 font-semibold";
+    "block py-2 px-4 lg:px-0 text-white hover:text-blue-200 transition-colors font-semibold";
 
   return (
     <nav>
-      <ul className="lg:flex lg:space-x-4">
+      <ul className="lg:flex lg:space-x-8">
         <li>
           <Link to="/" className={linkStyles}>
             Home

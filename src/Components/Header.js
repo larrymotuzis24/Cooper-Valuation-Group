@@ -12,13 +12,13 @@ const Header = () => {
 
   return (
     <div className="flex flex-col">
-      <header className="bg-white shadow-md py-4">
-        <div className="container mx-auto flex items-center justify-between">
+      <header className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-md py-4">
+        <div className="container mx-auto flex items-center justify-between px-4 lg:px-0">
           <div className="flex items-center">
-            <img className="w-32 h-20" src={CVGlogo} alt="CVG logo" />
+            <img className="w-48 h-32" src={CVGlogo} alt="CVG logo" />
           </div>
           <button
-            className="lg:hidden text-blue-600 focus:outline-none"
+            className="lg:hidden text-white focus:outline-none hover:text-blue-200 transition-colors"
             onClick={toggleMenu}
           >
             <svg
@@ -40,13 +40,13 @@ const Header = () => {
           <div
             className={`${
               isOpen ? "block" : "hidden"
-            } lg:flex items-center mt-4 lg:mt-0`}
+            } lg:flex items-center mt-4 lg:mt-0 text-white`}
           >
             <Nav />
           </div>
         </div>
       </header>
-      <div className="mt-20 place-self-center">
+      <div className="mt-24 place-self-center">
         <Outlet />
       </div>
     </div>
