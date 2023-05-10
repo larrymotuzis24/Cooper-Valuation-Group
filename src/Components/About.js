@@ -27,7 +27,7 @@ const teamListDisplay = teamList.map((person, index) => {
   });
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-4 pb-8 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+    <div className="flex flex-col w-full mx-auto pt-2 pb-2 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
         <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2"> Our People </h2>

@@ -46,7 +46,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="mt-24 place-self-center">
+      <div className="mt-8 place-self-center">
         <Outlet />
       </div>
     </div>
