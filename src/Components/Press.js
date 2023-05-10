@@ -10,7 +10,7 @@ const Press = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+        <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-green-300 via-green-400 to-green-500 rounded-lg shadow-md text-white">
             <div className="flex flex-col mb-8">
                 <div className="w-80 border-b border-white mx-auto"></div>
                 <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> CVG in the News </h2>
@@ -19,7 +19,7 @@ const Press = () => {
             <div className="bg-white p-4 rounded-lg shadow-md text-gray-800">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
                     {newsList.map((newsArticle, index) => (
-                        <div key={index} className="flex flex-col items-center p-4 bg-blue-100 rounded-lg shadow-md space-y-2">
+                        <div key={index} className="flex flex-col items-center p-4 bg-green-100 rounded-lg shadow-md space-y-2">
                             <a href={newsArticle.link} className="text-center text-blue-600 hover:underline">{newsArticle.title}</a>
                         </div>
                     ))}
