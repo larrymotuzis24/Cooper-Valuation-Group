@@ -11,34 +11,30 @@ const Clients = () => {
     'Busey Bank','MidCap Financial, LLC', 'Gershman Mortgage', 'Infinity Healthcare Management of IL',
     'Academy Bank', 'First Merit Bank', 'Fifth Third Bancorp', 'First American Capital Group Corp', 'Centennial Mortgage, Inc.'
 ];
-const clientDisplay = clientList.map((client, index) => {
-    return (
-        <li key={index} className="list-disc"> { client } </li>
-    )
-});
-    
-    return (
-        <div className='flex flex-col mx-auto w-5/6'>
-             <div className="flex flex-col">
-             <div className="w-80 border border-black place-self-center"></div>
-             <h2  className="text-3xl font-bold text-center whitespace-nowrap"> Clients & Testimonials </h2>
-             <div className="w-60 border border-black place-self-center mb-1"></div>
-             <div className="self-center mt-4">
-                <p className="text-xl" > {clientPageIntro} </p>
+
+return (
+    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+      <div className="flex flex-col mb-8">
+        <div className="w-80 border-b border-white mx-auto"></div>
+        <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> Clients & Testimonials </h2>
+        <div className="w-60 border-b border-white mx-auto mb-4"></div>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
+        <p className="text-xl mb-4">{clientPageIntro}</p>
+        <div className="w-3/6 border-b border-gray-300 mx-auto mt-4 mb-4"></div>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800">
+        <p className="text-2xl text-center font-semibold mb-4">Partial List of our Valued Clients</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+          {clientList.map((client, index) => (
+            <div key={index} className="flex flex-col items-center p-4 bg-blue-100 rounded-lg shadow-md space-y-2">
+              <p className="text-center">{client}</p>
             </div>
-            <div className="w-3/6 border border-black place-self-center mt-4 mb-2"></div>
-            </div>
-            <div>
-                <p className="text-xl text-center underline mb-2"> Partial List of our Valued Clients </p>
-                <div>
-                    <ul className="grid grid-cols-3 gap-2"> 
-                        {clientDisplay}
-                    </ul>
-                        
-                </div>
-            </div>
+          ))}
         </div>
-    )
+      </div>
+    </div>
+  )
 };
 
 export default Clients;
