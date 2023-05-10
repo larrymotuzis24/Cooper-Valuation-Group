@@ -1,11 +1,15 @@
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
+import { GiArchiveResearch } from "react-icons/gi";
+import { RiContactsBook2Line } from "react-icons/ri";
+import { MdOutlineAnalytics } from "react-icons/md";
+
+
 
 const Home = () => {
   return (
     <div className="flex flex-col w-full lg:w-5/6 mx-auto py-8 px-4 lg:px-0">
       <div className="bg-gradient-to-r from-textbox via-first to-second p-8 rounded-lg shadow-md text-white mb-12">
-        <h2 className="text-4xl font-bold text-center mb-8">
+        <h2 className="font-Garamond text-7xl font-bold text-center mb-8">
           Cooper Valuation Group
         </h2>
         <h2 className="text-2xl font-semibold text-center">
@@ -20,19 +24,19 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-lg font-medium text-gray-800">
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
-              <BsArrowRight size={32} />
+              <GiArchiveResearch size={32} />
             </div>
             <span className="text-center">Provide high-quality market research</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
-              <BsArrowRight size={32} />
+              <RiContactsBook2Line size={32} />
             </div>
             <span className="text-center">Provide superior client contact & communication</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
-              <BsArrowRight size={32} />
+              <MdOutlineAnalytics size={32} />
             </div>
             <span className="text-center">Provide detailed analysis of market transactions & trends</span>
           </div>
