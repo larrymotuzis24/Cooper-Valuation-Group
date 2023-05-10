@@ -1,5 +1,7 @@
 import React from "react";
 
+import CarouselComponent from "./CarouselComponent";
+
 const Services = () => {
     const healthcarePropertyList = [
     'SNF - Skilled Nursing Facility (geriatric and pediatric)', 'ICF - Intermediate Care Facility',
@@ -52,6 +54,10 @@ const Services = () => {
                 </ul>
               </div>
             </div>
+          </div>
+          <div>
+            <CarouselComponent />
+
           </div>
         </div>
       )

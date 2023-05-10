@@ -1,0 +1,19 @@
+.carousel .slide {
+    background: none;
+  }
+  .carousel .control-next.control-arrow:before,
+  .carousel .control-prev.control-arrow:before {
+    border-width: 2px;
+    border-color: white;
+  }
+  .carousel .control-dots .dot {
+    background: white;
+    box-shadow: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+  .carousel .control-dots .dot.selected {
+    background: white;
+  }
+  
