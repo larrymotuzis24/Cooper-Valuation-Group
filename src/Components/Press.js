@@ -8,25 +8,23 @@ const Press = () => {
         {title:'Senior Housing Article - 2013 - Sperry Van Ness/Ramshaw Real Estate', link:'https://www.coopervaluationgroup.com/IAR-article-05-08-13.pdf'},
         {title:'Ballard Rehab SNF Sale - 6.15.2011 - RE Journals.com', link:''}
     ];
-    const newsListDisplay = newsList.map((newsArticle, index) => {
-        return (
-            <a key={index} href={newsArticle.link} className="inline-block px-4 py-2 rounded-md text-white hover:font-bold underline" > 
-                { newsArticle.title } 
-            </a>
-        )
-    });
 
     return (
-        <div>
-            <div className="flex flex-col">
-             <div className="w-80 border border-black place-self-center"></div>
-             <h2  className="text-3xl font-bold text-center whitespace-nowrap"> CVG in the News </h2>
-             <div className="w-60 border border-black place-self-center mb-1"></div>
-             </div>
-             <div className="relative flex flex-col mt-6">
-                    {newsListDisplay}
-                    <div class="absolute top-0 left-0 w-full h-full opacity-0 pointer-events-none bg-gray-500"></div>
-             </div>
+        <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+            <div className="flex flex-col mb-8">
+                <div className="w-80 border-b border-white mx-auto"></div>
+                <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> CVG in the News </h2>
+                <div className="w-60 border-b border-white mx-auto mb-4"></div>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md text-gray-800">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
+                    {newsList.map((newsArticle, index) => (
+                        <div key={index} className="flex flex-col items-center p-4 bg-blue-100 rounded-lg shadow-md space-y-2">
+                            <a href={newsArticle.link} className="text-center text-blue-600 hover:underline">{newsArticle.title}</a>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     )
 };
