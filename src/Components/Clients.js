@@ -13,7 +13,7 @@ const Clients = () => {
 ];
 
 return (
-    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 rounded-lg shadow-md text-white">
+    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-green-300 via-green-400 to-green-500 rounded-lg shadow-md text-white">
       <div className="flex flex-col mb-8">
         <div className="w-80 border-b border-white mx-auto"></div>
         <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> Clients & Testimonials </h2>
