@@ -27,7 +27,7 @@ return (
         <p className="text-2xl text-center font-semibold mb-4">Partial List of our Valued Clients</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
           {clientList.map((client, index) => (
-            <div key={index} className="flex flex-col items-center p-4 bg-blue-100 rounded-lg shadow-md space-y-2">
+            <div key={index} className="flex flex-col items-center p-4 bg-green-100 rounded-lg shadow-md space-y-2">
               <p className="text-center">{client}</p>
             </div>
           ))}
