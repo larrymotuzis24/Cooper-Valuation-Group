@@ -46,9 +46,9 @@ const About = () => {
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
         <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Our People </h2>
-        <div className="w-60 border-b border-white mx-auto mt-1"></div>
+        <div className="w-60 border-b border-white mx-auto"></div>
       </div>
-      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8 mt-4">
                <p> <span className="font-bold"> Michael L. Cooper, MAI </span> is the founder and President of the Cooper Valuation Group, which he started in 2010.
                         Mr. Cooper’s core competencies include numerous assignments involving age-restricted housing, assisted living and nursing facilities throughout Illinois, Iowa, Wisconsin, Indiana, Ohio, Missouri, and Michigan. His experience includes a broad range of operations ranging from private pay to Medicaid/Medicare facilities for projects operating successfully as well as work out deals.
                         He is familiar with <span className="font-bold"> HUD’s Lean Program </span>for insuring mortgages for Section 232’s (nursing and assisted living facilities). HUD developed the LEAN process in 2008 specifically for Section 232 applications.</p>
