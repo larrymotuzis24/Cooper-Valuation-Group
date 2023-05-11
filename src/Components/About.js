@@ -25,10 +25,21 @@ const About = () => {
   const handleClosePopup = () => {
     setPopupVisible(false);
   };
+  const getCustomContent = (person) => {
+    if (person.firstName === 'Michael L.') {
+      return "This is the custom content for Michael L. Cooper.";
+    } else if (person.firstName === 'David P.') {
+      return "This is the custom content for David P. Gulley.";
+    } else if (person.firstName === 'Michael E.') {
+      return "This is the custom content for Michael E. Madziarek.";
+    } else if (person.firstName === 'Patrick') {
+      return "This is the custom content for Patrick Riley.";
+    }
+    return `This is the default custom content for ${person.firstName} ${person.lastName}.`;
+  };
 
   const teamListDisplay = teamList.map((person, index) => {
-    // Customize the content for each person
-    const customContent = `This is the custom content for ${person.firstName} ${person.lastName}.`;
+    const customContent = getCustomContent(person);
 
     return (
       <div key={index} className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
