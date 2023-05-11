@@ -18,13 +18,3 @@
   }
 
 
-.blur {
-  filter: blur(2px);
-  pointer-events: none;
-}
-
-.exit-popup {
-  cursor: pointer;
-  font-size: 24px;
-  font-weight: bold;
-}
