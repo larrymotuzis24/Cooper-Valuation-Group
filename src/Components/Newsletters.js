@@ -11,7 +11,7 @@ const Newsletters = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full mx-auto pt-4 pb- px-4 sm:px-8 bg-third shadow-md text-white">
+        <div className="flex flex-col w-full mx-auto pt-4 px-4 sm:px-8 bg-third shadow-md text-white">
             <div className="flex flex-col mb-4">
                 <div className="w-60 border-b border-white mx-auto"></div>
                 <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> CVG Newsletters </h2>

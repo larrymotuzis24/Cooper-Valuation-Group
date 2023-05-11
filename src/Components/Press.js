@@ -26,7 +26,7 @@ const Press = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-third rounded-lg shadow-md text-white">
+    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
         <h2 className="text-4xl font-bold text-center whitespace-nowrap mt-2 mb-2">
