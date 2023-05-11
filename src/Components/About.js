@@ -42,11 +42,11 @@ const About = () => {
   });
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-2 pb-12 sm:px-8">
+    <div className="flex flex-col w-full mx-auto pt-4 pb-20 px-4 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
-        <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2"> Our People </h2>
-        <div className="w-40 border-b border-white mx-auto mt-1"></div>
+        <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2 mb-2"> Our People </h2>
+        <div className="w-60 border-b border-white mx-auto mt-1"></div>
       </div>
       <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
                <p> <span className="font-bold"> Michael L. Cooper, MAI </span> is the founder and President of the Cooper Valuation Group, which he started in 2010.

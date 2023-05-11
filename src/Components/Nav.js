@@ -19,7 +19,7 @@ const Nav = () => {
           <li key={index}>
             <Link
               to={item.path}
-              className="text-third content-center text-lg font-medium px-2 py-1 rounded-lg hover:bg-nongreen transition-colors"
+              className="text-third text-lg font-medium px-2 py-1 rounded-lg hover:bg-nongreen transition-colors"
             >
               {item.name}
             </Link>
