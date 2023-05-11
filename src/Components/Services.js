@@ -3,64 +3,81 @@ import CarouselComponent from "./CarouselComponent";
 
 const Services = () => {
   const healthcarePropertyList = [
-    'SNF - Skilled Nursing Facility (geriatric and pediatric)', 'ICF - Intermediate Care Facility',
-    'DD – Developmentally Disabled', 'ALF - Assisted Living – including dedicated dementia ALFs',
-    'SLF - Supportive Living Facility', 'ILF - Independent Living Facility', 
-    'SILF - Subsidized Independent Living Facility', 'CCRC - Continuum of Care Retirement Communities'
-    ];
+    "SNF - Skilled Nursing Facility (geriatric and pediatric)",
+    "ICF - Intermediate Care Facility",
+    "DD – Developmentally Disabled",
+    "ALF - Assisted Living – including dedicated dementia ALFs",
+    "SLF - Supportive Living Facility",
+    "ILF - Independent Living Facility",
+    "SILF - Subsidized Independent Living Facility",
+    "CCRC - Continuum of Care Retirement Communities",
+  ];
 
-    const housingExpertiseList = ['Market rate apartment complexes', 'Age-Restricted Senior Housing'];
+  const housingExpertiseList = [
+    "Market rate apartment complexes",
+    "Age-Restricted Senior Housing",
+  ];
+  const healthcareProperties = healthcarePropertyList.map((property, index) => {
+    return (
+      <div
+        key={index}
+        className="w-full h-full flex items-center justify-center p-4 bg-nongreen rounded-lg shadow-md space-y-2"
+      >
+        <p className="text-center text-third">{property}</p>
+      </div>
+    );
+  });
 
-    const healthcareProperties = healthcarePropertyList.map((property, index) => {
-        return (
-          <li key={index} className="list-disc text-third ml-4"> {property} </li>
-        )
-      });
-    
-     
-    
-      const housingExpertise = housingExpertiseList.map((item, index) => {
-        return (
-         
-          <li key={index} className="list-disc text-third ml-4"> {item} </li>
-        
-        )
-      });
+  const housingExpertise = housingExpertiseList.map((item, index) => {
+    return (
+      <div
+        key={index}
+        className="flex flex-col items-center p-4 bg-nongreen rounded-lg shadow-md space-y-2"
+      >
+        <p className="text-center text-third">{item}</p>
+      </div>
+    );
+  });
 
   return (
-    <div className="flex flex-col min-h-screen w-full mx-auto pt-4 pb-8 sm:px-8 bg-third shadow-md text-white">
-      <div className="flex flex-col mb-4">
-      <div className="w-60 border-b border-white mx-auto"></div>
-            <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Products & Services </h2>
-            <div className="w-60 border-b border-white mx-auto"></div>
+    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-third shadow-md text-white">
+      <div className="flex flex-col mb-8">
+        <div className="w-60 border-b border-white mx-auto"></div>
+        <h2 className="text-4xl font-bold text-center whitespace-nowrap mt-2 mb-2">
+          Products & Services
+        </h2>
+        <div className="w-60 border-b border-white mx-auto"></div>
       </div>
-      <div className="flex-grow flex flex-col justify-between mt-4">
-        <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8" >
-        <h2 className="text-2xl mb-4">We offer Appraisal Reports that are HUD-compliant as well as those that are approved for “conventional lenders” such as banks and other federally regulated lenders.</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <div className="bg-nongreen p-4 rounded-lg shadow-md space-y-2">
-              <ul className="space-y-2 text-lg">
-                {healthcareProperties}
-              </ul>
-            </div>
-          </div>
+      <div className="bg-white p-3 rounded-lg shadow-md text-gray-800 mb-8">
+        <p className="text-xl mb-2">
+          We offer Appraisal Reports that are HUD-compliant as well as those
+          that are approved for “conventional lenders” such as banks and
+          other federally regulated lenders.
+        </p>
+        <div className="w-3/6 border-b border-gray-300 mx-auto mt-4"></div>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800">
+        <p className="text-2xl text-center font-semibold mb-4">
+          Healthcare Property Types We Specialize In
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2 w-full">
+          {healthcareProperties}
         </div>
-        <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
-        <p className="mb-4">Our housing expertise includes valuation and consulting for apartment complexes including:</p>
-          <div className="grid grid-cols-1 gap-4 mt-4">
-            <div className="bg-nongreen p-4 rounded-lg shadow-md space-y-2">
-              <ul className="flex items-center justify-around space-y-2 text-lg">
-                {housingExpertise}
-              </ul>
-            </div>
-          </div>
+      </div>
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mt-8">
+        <p className="text-2xl text-center font-semibold mb-4">
+          Our Housing Expertise Includes
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mt-2 justify-center gap-x-8">
+          {housingExpertise}
         </div>
-        <div>
-          <CarouselComponent />
-        </div>
+      </div>
+      <div className="mt-8">
+        <CarouselComponent />
       </div>
     </div>
   );
+  
 };
 
 export default Services;
