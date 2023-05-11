@@ -26,19 +26,19 @@ const Home = () => {
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
               <GiArchiveResearch size={32} />
             </div>
-            <span className="text-center">Provide high-quality market research</span>
+            <span className="text-center">High-quality market research</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
               <RiContactsBook2Line size={32} />
             </div>
-            <span className="text-center">Provide superior client contact & communication</span>
+            <span className="text-center">Superior client contact & communication</span>
           </div>
           <div className="flex flex-col items-center justify-center space-y-4">
             <div className="w-16 h-16 bg-primary p-4 rounded-full flex items-center justify-center text-white">
               <MdOutlineAnalytics size={32} />
             </div>
-            <span className="text-center">Provide detailed analysis of market transactions & trends</span>
+            <span className="text-center">Detailed analysis of market transactions & trends</span>
           </div>
         </div>
       </div>
