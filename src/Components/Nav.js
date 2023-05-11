@@ -9,7 +9,7 @@ const Nav = () => {
     { name: "Clients & Testimonials", path: "/clients" },
     { name: "Newsletters", path: "/newsletters" },
     { name: "Press", path: "/press" },
-    { name: "Contact Us", path: "/contact" },
+    // { name: "Contact Us", path: "/contact" },
   ];
 
   return (
