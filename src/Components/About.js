@@ -45,7 +45,7 @@ const About = () => {
     <div className="flex flex-col w-full pb-32 mx-auto pt-4 px-4 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
-        <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2 mb-2"> Our People </h2>
+        <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Our People </h2>
         <div className="w-60 border-b border-white mx-auto mt-1"></div>
       </div>
       <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">

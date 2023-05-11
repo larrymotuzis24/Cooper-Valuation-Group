@@ -31,7 +31,7 @@ const Services = () => {
     <div className="flex flex-col min-h-screen w-full mx-auto pt-4 pb-8 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
       <div className="w-60 border-b border-white mx-auto"></div>
-            <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Products & Services </h2>
+            <h2 className="</div>"> Products & Services </h2>
             <div className="w-60 border-b border-white mx-auto"></div>
       </div>
       <div className="flex-grow flex flex-col justify-between mt-4">
