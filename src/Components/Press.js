@@ -26,7 +26,7 @@ const Press = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-third shadow-md text-white">
+    <div className="flex flex-col w-full mx-auto pt-4 pb-44 px-4 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
         <h2 className="text-4xl font-bold text-center whitespace-nowrap mt-2 mb-2">
@@ -40,7 +40,7 @@ const Press = () => {
           {newsList.map((newsArticle, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 bg-nongreen rounded-lg shadow-md space-y-2 cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
+              className="flex flex-col justify-center items-center p-12 bg-nongreen rounded-lg shadow-md space-y-2 cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
               onClick={() => {
                 if (newsArticle.link) {
                   window.open(newsArticle.link, "_blank");
