@@ -13,7 +13,7 @@ const Services = () => {
 
     const healthcareProperties = healthcarePropertyList.map((property, index) => {
         return (
-          <li key={index} className="list-disc text-gray-800 ml-4"> {property} </li>
+          <li key={index} className="list-disc text-third ml-4"> {property} </li>
         )
       });
     
@@ -21,22 +21,24 @@ const Services = () => {
     
       const housingExpertise = housingExpertiseList.map((item, index) => {
         return (
-          <li key={index} className="list-disc text-gray-800 ml-4"> {item} </li>
+         
+          <li key={index} className="list-disc text-third ml-4"> {item} </li>
+        
         )
       });
 
   return (
-    <div className="flex flex-col min-h-screen w-full mx-auto pt-4 pb-8 sm:px-8 bg-gradient-to-br from-green-300 via-green-400 to-green-500 rounded-lg shadow-md text-white">
-      <div className="flex flex-col mb-8">
-      <div className="w-80 border-b border-white mx-auto"></div>
-            <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1"> Products & Services </h2>
-            <div className="w-60 border-b border-white mx-auto mb-4"></div>
+    <div className="flex flex-col min-h-screen w-full mx-auto pt-4 pb-8 sm:px-8 bg-third shadow-md text-white">
+      <div className="flex flex-col mb-4">
+      <div className="w-60 border-b border-white mx-auto"></div>
+            <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Products & Services </h2>
+            <div className="w-60 border-b border-white mx-auto"></div>
       </div>
-      <div className="flex-grow flex flex-col justify-between">
-        <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
+      <div className="flex-grow flex flex-col justify-between mt-4">
+        <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8" >
         <h2 className="text-2xl mb-4">We offer Appraisal Reports that are HUD-compliant as well as those that are approved for “conventional lenders” such as banks and other federally regulated lenders.</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <div className="bg-green-200 p-4 rounded-lg shadow-md space-y-2">
+            <div className="bg-nongreen p-4 rounded-lg shadow-md space-y-2">
               <ul className="space-y-2 text-lg">
                 {healthcareProperties}
               </ul>
@@ -46,8 +48,8 @@ const Services = () => {
         <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
         <p className="mb-4">Our housing expertise includes valuation and consulting for apartment complexes including:</p>
           <div className="grid grid-cols-1 gap-4 mt-4">
-            <div className="bg-green-200 p-4 rounded-lg shadow-md space-y-2">
-              <ul className="space-y-2 text-lg">
+            <div className="bg-nongreen p-4 rounded-lg shadow-md space-y-2">
+              <ul className="flex items-center justify-around space-y-2 text-lg">
                 {housingExpertise}
               </ul>
             </div>

@@ -33,22 +33,22 @@ const About = () => {
     return (
       <div key={index} className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
         <img src={person.bioPicSrc} alt={person.firstName + " " + person.lastName} className="w-32 h-40 my-2 rounded-lg cursor-pointer" onClick={() => handleImageClick(person, customContent)}/>
-        <p className="text-green-600 font-semibold text-lg"> {person.firstName} {person.lastName} </p>
-           <p className="text-green-500 font-medium"> {person.role} </p>
-           <p className="text-green-700"> Mobile: {person.mobile} </p>
-           <a className="text-green-600 hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
+        <p className="text-third font-semibold text-lg"> {person.firstName} {person.lastName} </p>
+           <p className="text-second font-medium"> {person.role} </p>
+           <p className="text-primary"> Mobile: {person.mobile} </p>
+           <a className="text-primary hover:text-green-400 transition-colors" href={`mailto:${person.email}`}> {person.email} </a>
       </div>
     )
   });
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-2 pb-12 sm:px-8">
+    <div className="flex flex-col w-full pb-32 mx-auto pt-4 px-4 sm:px-8 bg-third shadow-md text-white">
       <div className="flex flex-col mb-4">
         <div className="w-60 border-b border-white mx-auto"></div>
-        <h2 className="text-3xl font-bold text-center whitespace-nowrap mt-2"> Our People </h2>
-        <div className="w-40 border-b border-white mx-auto mt-1"></div>
+        <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> Our People </h2>
+        <div className="w-60 border-b border-white mx-auto"></div>
       </div>
-      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
+      <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8 mt-4">
                <p> <span className="font-bold"> Michael L. Cooper, MAI </span> is the founder and President of the Cooper Valuation Group, which he started in 2010.
                         Mr. Cooper’s core competencies include numerous assignments involving age-restricted housing, assisted living and nursing facilities throughout Illinois, Iowa, Wisconsin, Indiana, Ohio, Missouri, and Michigan. His experience includes a broad range of operations ranging from private pay to Medicaid/Medicare facilities for projects operating successfully as well as work out deals.
                         He is familiar with <span className="font-bold"> HUD’s Lean Program </span>for insuring mortgages for Section 232’s (nursing and assisted living facilities). HUD developed the LEAN process in 2008 specifically for Section 232 applications.</p>

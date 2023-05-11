@@ -26,10 +26,10 @@ const Press = () => {
   ];
 
   return (
-    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-gradient-to-br from-green-300 via-green-400 to-green-500 rounded-lg shadow-md text-white">
-      <div className="flex flex-col mb-8">
-        <div className="w-80 border-b border-white mx-auto"></div>
-        <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-1">
+    <div className="flex flex-col w-full mx-auto pt-4 pb-8 px-4 sm:px-8 bg-third shadow-md text-white">
+      <div className="flex flex-col mb-4">
+        <div className="w-60 border-b border-white mx-auto"></div>
+        <h2 className="text-4xl font-bold text-center whitespace-nowrap mt-2 mb-2">
           {" "}
           CVG in the News{" "}
         </h2>
@@ -40,7 +40,7 @@ const Press = () => {
           {newsList.map((newsArticle, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-4 bg-green-100 rounded-lg shadow-md space-y-2 cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
+              className="flex flex-col items-center p-4 bg-nongreen rounded-lg shadow-md space-y-2 cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
               onClick={() => {
                 if (newsArticle.link) {
                   window.open(newsArticle.link, "_blank");
@@ -49,7 +49,7 @@ const Press = () => {
             >
               <a
                 href={newsArticle.link}
-                className="text-center text-blue-600 hover:underline"
+                className="text-center text-blue-600 hover:underline hover:text-third"
                 target="_blank"
                 rel="noopener noreferrer"
               >
