@@ -41,19 +41,25 @@ const About = () => {
   
     return (
       <div>
+        <div className="flex justify-center">
         <img src={person.bioPicSrc} alt={`${person.firstName} ${person.lastName}`} className="w-32 h-40 my-2 rounded-lg mb-4" />
-        <p className="text-primary mb-2">Mobile: {person.mobile}</p>
-        <a className="text-primary hover:text-green-400 transition-colors mb-4" href={`mailto:${person.email}`}>{person.email}</a>
-        <p>{bioContent[person.firstName]}</p>
+        </div>
+        <p className="text-primary mb-1 text-center">Mobile: {person.mobile}</p>
+        <p className="text-center p-2">
+        <a className="text-primary hover:text-third transition-colors mb-4" href={`mailto:${person.email}`}>{person.email}</a>
+        </p>
+        <p className="text-center">{bioContent[person.firstName]}</p>
         {person.firstName === 'Michael L.' && (
+          <p className="text-center pt-2">
           <a
             href={MichaelCooperPDF}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-green-400 transition-colors mt-4"
+            className="text-primary hover:text-third transition-colors mt-4"
           >
             Click here to view Michael's Qualification page
           </a>
+          </p>
         )}
       </div>
     );
@@ -99,7 +105,7 @@ const About = () => {
             <button className="exit-popup text-red-500 hover:text-red-700 absolute top-2 right-2" onClick={handleClosePopup}>&times;</button>
 
             <div className="popup-content mt-2">
-              <h3 className="text-xl font-semibold mb-4">{selectedPerson.firstName} {selectedPerson.lastName}</h3>
+              <h3 className="text-center text-xl font-semibold mb-4">{selectedPerson.firstName} {selectedPerson.lastName}</h3>
               {popupContent}
             </div>
           </div>

@@ -9,8 +9,10 @@ const Nav = () => {
     { name: "Clients & Testimonials", path: "/clients" },
     { name: "Newsletters", path: "/newsletters" },
     { name: "Press", path: "/press" },
+
   ];
 
+  
   return (
     <nav className="bg-white rounded-lg p-2 lg:w-7/8 lg:ml-4">
       <ul className="flex flex-col lg:flex-row lg:text-center gap-2 lg:gap-4">

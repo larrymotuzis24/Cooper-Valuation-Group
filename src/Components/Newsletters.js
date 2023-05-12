@@ -11,7 +11,7 @@ const Newsletters = () => {
     ];
 
     return (
-        <div className="flex flex-col w-full mx-auto pt-4 px-4 sm:px-8 bg-third shadow-md text-white">
+        <div className="flex flex-col w-full mx-auto pb-44 pt-4 px-4 sm:px-8 bg-third shadow-md text-white">
             <div className="flex flex-col mb-4">
                 <div className="w-60 border-b border-white mx-auto"></div>
                 <h2 className="text-4xl font-bold text-center whitespace-nowrap mb-2 mt-2"> CVG Newsletters </h2>
@@ -20,7 +20,7 @@ const Newsletters = () => {
             <div className="bg-white p-4 rounded-lg shadow-md text-gray-800 mb-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-2">
                     {newslettersList.map((newsletter, index) => (
-                        <div key={index} className="flex flex-col items-center p-4 bg-nongreen rounded-lg shadow-md space-y-2">
+                        <div key={index} className="flex flex-col justify-center items-center p-12 bg-nongreen rounded-lg shadow-md space-y-2">
                             <a href={newsletter.link} target="_blank" rel="noopener noreferrer" className="text-center text-blue-600 transform hover:scale-105 hover:text-third transition duration-300 ease-in-out">{newsletter.title}</a>
                         </div>
                     ))}
