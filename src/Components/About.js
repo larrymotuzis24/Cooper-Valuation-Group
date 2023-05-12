@@ -5,6 +5,7 @@ import { MichaelLCooperBio, DavidGulleyBio, MichaelMadziarekBio, PatRileyBio } f
 import MichaelMadziarek from '../bioImages/MichaelMadziarek.jpg';
 import DavidGulley from '../bioImages/DavidGulley.jpg';
 import PatRiley from '../bioImages/PatRiley.jpg';
+import MichaelCooperPDF from '../Michael_Cooper_Qualifications.pdf';
 
 
 const About = () => {
@@ -46,7 +47,7 @@ const About = () => {
         <p>{bioContent[person.firstName]}</p>
         {person.firstName === 'Michael L.' && (
           <a
-            href="https://www.coopervaluationgroup.com/Michael%20L%20Cooper%20MAI%20Qualifications%208.25.15.pdf"
+            href={MichaelCooperPDF}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-green-400 transition-colors mt-4"

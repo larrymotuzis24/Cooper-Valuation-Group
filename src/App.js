@@ -5,7 +5,6 @@ import Services from "./Components/Services";
 import Clients from "./Components/Clients";
 import Newsletters from "./Components/Newsletters";
 import Press from "./Components/Press";
-import ContactPage from "./Components/ContactPage";
 import { Route, Routes } from "react-router-dom";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -30,7 +29,6 @@ const App = () => {
         <Route path="/clients" element={<Clients />} />
         <Route path="/newsletters" element={<Newsletters />} />
         <Route path="/press" element={<Press />} />
-        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Layout>
   );

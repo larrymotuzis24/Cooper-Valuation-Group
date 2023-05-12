@@ -14,7 +14,7 @@ const Home = () => {
         </h2>
         <h2 className="text-2xl font-semibold text-center">
           A leading commercial real estate appraisal and market analysis firm
-          specializing in healthcare and senior housing properties.
+          specializing in senior housing and care properties.
         </h2>
       </div>
       <div className="bg-white p-8 rounded-lg shadow-md mb-12">
