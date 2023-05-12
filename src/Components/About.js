@@ -70,7 +70,7 @@ const About = () => {
 
     return (
       <div key={index} className="border border-gray-300 flex flex-col items-center p-4 bg-white rounded-lg shadow-md space-y-2">
-        <img src={person.bioPicSrc} alt={person.firstName + " " + person.lastName} className="w-32 h-40 my-2 rounded-lg cursor-pointer" onClick={() => handleImageClick(person, customContent)}/>
+        <img src={person.bioPicSrc} alt={person.firstName + " " + person.lastName} className="w-32 h-40 my-2 rounded-lg cursor-pointer hover:scale-105 hover:text-third transition duration-300 ease-in-out" onClick={() => handleImageClick(person, customContent)}/>
         <p className="text-third font-semibold text-lg"> {person.firstName} {person.lastName} </p>
            <p className="text-second font-medium"> {person.role} </p>
            <p className="text-primary"> Mobile: {person.mobile} </p>
